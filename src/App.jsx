@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <h2>Mujeeb's PortFolio</h2>
+      <p>It will start building soon....</p>
     </>
   );
 }
