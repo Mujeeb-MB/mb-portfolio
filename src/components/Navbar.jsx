@@ -20,12 +20,25 @@ const Navbar = () => {
           </button>
         </a>
 
-        <FaLinkedin className="hover:cursor-pointer hover:text-amber-300" />
-        <FaGithub className="hover:cursor-pointer hover:text-amber-300" />
-        <FaSquareXTwitter className="hover:cursor-pointer hover:text-amber-300" />
+        <FaLinkedin
+          className="hover:cursor-pointer hover:text-amber-300"
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/mohammed-mujeeb/",
+              "_blank"
+            )
+          }
+        />
+        <FaGithub
+          className="hover:cursor-pointer hover:text-amber-300"
+          onClick={() => window.open("https://github.com/Mujeeb-MB", "_blank")}
+        />
+        <FaSquareXTwitter
+          className="hover:cursor-pointer hover:text-amber-300"
+          onClick={() => window.open("https://x.com/mujeebmd_", "_blank")}
+        />
       </div>
     </nav>
   );
 };
-
 export default Navbar;
