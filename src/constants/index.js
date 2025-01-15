@@ -1,4 +1,4 @@
-import project1 from "../assets/projects/project-1.jpg";
+import project1 from "../assets/projects/Farm.png";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
@@ -19,11 +19,22 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "FarmFolio Website",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "A smart farm management tool with expense tracking, farm management, analytics, multi-language support, and AI-powered farming assistance.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "React + Vite",
+      "Material-UI",
+      "Recharts",
+      "i18next",
+      "Hugging Face AI",
+      "Node.js",
+      "Firebase",
+    ],
+    url: "https://farmerfolio.netlify.app/",
   },
   {
     title: "Task Management App",

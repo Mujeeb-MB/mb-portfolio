@@ -27,7 +27,8 @@ const Projects = () => {
                 alt={project.title}
                 width={150}
                 height={150}
-                className="mb-6 rounded"
+                className="mb-6 rounded cursor-pointer hover:opacity-80"
+                onClick={() => window.open(project.url, "_blank")}
               />
             </motion.div>
             <motion.div
@@ -36,7 +37,12 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full max-w-full lg:w-3/4"
             >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
+              <h6
+                className="mb-2 font-semibold cursor-pointer hover:underline hover:text-amber-400"
+                onClick={() => window.open(project.url, "_blank")}
+              >
+                {project.title}
+              </h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
               {project.technologies.map((tech, i) => (
                 <span
