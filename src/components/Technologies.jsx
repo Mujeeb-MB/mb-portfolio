@@ -1,26 +1,88 @@
 import React from "react";
-import { TbBrandHtml5 } from "react-icons/tb";
-import { TbBrandCss3 } from "react-icons/tb";
-import { TbBrandJavascript } from "react-icons/tb";
-import { RiBootstrapFill } from "react-icons/ri";
-import { RiReactjsLine } from "react-icons/ri";
-import { SiReactquery } from "react-icons/si";
-import { SiReactrouter } from "react-icons/si";
 import { motion } from "framer-motion";
+import {
+  TbBrandHtml5,
+  TbBrandCss3,
+  TbBrandJavascript,
+  TbBrandReact,
+  TbBrandGit,
+  TbBrandTailwind,
+  TbBrandBootstrap,
+  TbBrandRedux,
+  TbBrandFirebase,
+  TbBrandAws,
+  TbBrandTypescript,
+} from "react-icons/tb";
+import {
+  // SiZustand,
+  SiReactrouter,
+  // SiRecharts,
+  SiMysql,
+  // SiJava,
+  SiPython,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
-const iconVariants = (duration) => ({
-  initial: { y: -10 },
-  animate: {
-    y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
+const iconVariants = (delay) => ({
+  initial: { opacity: 0, y: -100 },
+  animate: { opacity: 1, y: 0, transition: { delay, duration: 0.5 } },
 });
+
 const Technologies = () => {
+  const techs = [
+    {
+      icon: <TbBrandHtml5 className="text-7xl text-amber-500" />,
+      name: "HTML5",
+    },
+    { icon: <TbBrandCss3 className="text-7xl text-blue-500" />, name: "CSS3" },
+    {
+      icon: <TbBrandJavascript className="text-7xl text-yellow-500" />,
+      name: "JavaScript",
+    },
+    {
+      icon: <TbBrandReact className="text-7xl text-blue-400" />,
+      name: "React JS",
+    },
+    { icon: <TbBrandGit className="text-7xl text-red-500" />, name: "Git" },
+    {
+      icon: <TbBrandTailwind className="text-7xl text-blue-300" />,
+      name: "Tailwind CSS",
+    },
+    {
+      icon: <TbBrandBootstrap className="text-7xl text-purple-500" />,
+      name: "Bootstrap",
+    },
+    {
+      icon: <TbBrandRedux className="text-7xl text-purple-600" />,
+      name: "Redux",
+    },
+    // {
+    //   icon: <SiZustand className="text-7xl text-orange-500" />,
+    //   name: "Zustand",
+    // },
+    {
+      icon: <SiReactrouter className="text-7xl text-red-600" />,
+      name: "React Router DOM",
+    },
+    // {
+    //   icon: <SiRecharts className="text-7xl text-blue-500" />,
+    //   name: "Recharts",
+    // },
+    {
+      icon: <TbBrandFirebase className="text-7xl text-yellow-500" />,
+      name: "Firebase",
+    },
+    { icon: <SiMysql className="text-7xl text-blue-600" />, name: "SQL" },
+    { icon: <FaJava className="text-7xl text-red-500" />, name: "Java" },
+    { icon: <SiPython className="text-7xl text-blue-400" />, name: "Python" },
+    { icon: <TbBrandAws className="text-7xl text-orange-500" />, name: "AWS" },
+    {
+      icon: <TbBrandTypescript className="text-7xl text-blue-500" />,
+      name: "TypeScript",
+    },
+  ];
+
   return (
     <div className="border-b border-neutral-900 pb-24">
       <motion.h1
@@ -37,63 +99,21 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <TbBrandHtml5 className="text-7xl text-amber-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <TbBrandCss3 className="text-7xl text-blue-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(7)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <RiBootstrapFill className="text-7xl text-violet-600" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(9)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <TbBrandJavascript className="text-7xl text-yellow-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <RiReactjsLine className="text-7xl text-cyan-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <SiReactquery className="text-7xl text-red-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(7)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-400 p-4"
-        >
-          <SiReactrouter className="text-7xl text-red-900" />
-        </motion.div>
+        {techs.map((tech, index) => (
+          <motion.div
+            key={index}
+            variants={iconVariants(index * 0.2)}
+            initial="initial"
+            animate="animate"
+            className="rounded-2xl border-4 border-neutral-400 p-4"
+            data-tooltip-id="tech-tooltip"
+            data-tooltip-content={tech.name}
+          >
+            {tech.icon}
+          </motion.div>
+        ))}
       </motion.div>
+      <ReactTooltip id="tech-tooltip" />
     </div>
   );
 };

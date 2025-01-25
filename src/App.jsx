@@ -6,6 +6,7 @@ import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Certification from "./components/Certification";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
         <Technologies />
         <Experience />
         <Projects />
+        <Certification />
         <Contact />
       </div>
     </div>
