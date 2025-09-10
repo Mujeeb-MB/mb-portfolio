@@ -7,7 +7,7 @@ import gitHubFoundation from "../assets/github-foundations.png";
 
 export const HERO_CONTENT = `I'm a dedicated Frontend Developer with a knack for creating visually appealing and highly functional web applications. With expertise in HTML, CSS, JavaScript, and React, I bring ideas to life on the web. My passion lies in crafting seamless user experiences and delivering high-quality, responsive designs.`;
 
-export const ABOUT_TEXT = `I'm Mujeeb, a frontend developer with 1.5 years of experience. Currently working at Tata Consultancy Services (TCS), I specialize in HTML, CSS, JavaScript, and React, crafting responsive, user-friendly web experiences. Proficient in CSS frameworks like Bootstrap and Tailwind CSS, I focus on clean, efficient code. Let's connect and create something amazing together!`;
+export const ABOUT_TEXT = `I'm Mujeeb, a frontend developer with 2.5 years of experience. Currently working at Tata Consultancy Services (TCS), I specialize in HTML, CSS, JavaScript, and React, crafting responsive, user-friendly web experiences. Proficient in CSS frameworks like Bootstrap and Tailwind CSS, I focus on clean, efficient code. Let's connect and create something amazing together!`;
 
 export const EXPERIENCES = [
   {

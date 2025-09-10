@@ -12,7 +12,7 @@ const Navbar = () => {
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
-          href="https://drive.google.com/file/d/1lnfMpQ-Qmy_afjEmNzV0BCiB_tGLe65s/view?usp=sharing"
+          href="https://drive.google.com/file/d/1D_GXBJ4TzB7b3BaOvzG9zlkl1Y3Gz4K9/view?usp=sharing"
           target="blank"
         >
           <button className="bg-amber-400 border-collapse rounded-full px-4 py-2 text-sm m-2 text-black hover:bg-neutral-400  hover:text-white">
