@@ -5,9 +5,31 @@ import project4 from "../assets/projects/project-4.jpg";
 import internshalaWeb from "../assets/Internshala-cer.png";
 import gitHubFoundation from "../assets/github-foundations.png";
 
-export const HERO_CONTENT = `I'm a dedicated Frontend Developer with a knack for creating visually appealing and highly functional web applications. With expertise in HTML, CSS, JavaScript, and React, I bring ideas to life on the web. My passion lies in crafting seamless user experiences and delivering high-quality, responsive designs.`;
+// Calculate experience dynamically based on joining date
+const calculateExperience = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+  const diffInMonths =
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
 
-export const ABOUT_TEXT = `I'm Mujeeb, a frontend developer with 2.5 years of experience. Currently working at Tata Consultancy Services (TCS), I specialize in HTML, CSS, JavaScript, and React, crafting responsive, user-friendly web experiences. Proficient in CSS frameworks like Bootstrap and Tailwind CSS, I focus on clean, efficient code. Let's connect and create something amazing together!`;
+  const years = Math.floor(diffInMonths / 12);
+  const months = diffInMonths % 12;
+
+  // Example: "2.5 years" or "1 year 3 months"
+  const experience =
+    months >= 6
+      ? `${years}.${1} years` // show half year for 6+ months
+      : `${years} years`;
+
+  return experience;
+};
+
+const experienceYears = calculateExperience("2023-08-24");
+
+export const HERO_CONTENT = `I'm a frontend developer who loves turning ideas into interactive, user-friendly web apps. I work mainly with React, JavaScript, HTML, and CSS — building fast, clean, and responsive designs that actually feel good to use. I enjoy solving real problems through code and always look for ways to make the web a bit more beautiful and simple.`;
+
+export const ABOUT_TEXT = `Hey, I'm Mujeeb — a frontend developer with ${experienceYears} of experience, currently working at Tata Consultancy Services (TCS). I focus on building clean, responsive, and user-friendly web interfaces using React, JavaScript, HTML, and CSS. I’ve also worked with frameworks like Tailwind and Bootstrap to speed up development without compromising on design. I’m passionate about learning new tech, improving performance, and creating smooth user experiences that make an impact.`;
 
 export const EXPERIENCES = [
   {

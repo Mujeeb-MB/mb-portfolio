@@ -1,6 +1,6 @@
 import React from "react";
 import { HERO_CONTENT } from "../constants";
-import mujeebImg from "../assets/mujeeb.png";
+import mujeebRedImg from "../assets/mujeeb-red.png";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -47,7 +47,7 @@ const Hero = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
               className="mt-6"
-              src={mujeebImg}
+              src={mujeebRedImg}
               alt="Profile"
               width="400"
               height="300"

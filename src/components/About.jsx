@@ -17,7 +17,7 @@ const About = () => {
           className="w-full lg:w-1/2 lg:p-8"
         >
           <div className="flex items-center justify-center">
-            <img src={mujeebImg} alt="My Pic" width="400" height="200" />
+            <img src={mujeebImg} alt="My Pic" width="300" height="200" />
           </div>
         </motion.div>
         <motion.div
