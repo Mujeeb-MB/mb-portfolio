@@ -101,7 +101,7 @@ export const CERTIFICATES = [
 ];
 
 export const CONTACT = {
-  address: "1-20/2, Veerapur, Hyderabad, TS ",
+  address: "Hyderabad, TS ",
   phoneNo: "+91 9010320330",
   email: "md.mujeeb5577@gmail.com",
 };

@@ -12,7 +12,7 @@ const Navbar = () => {
       </div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <a
-          href="https://drive.google.com/file/d/1FffTTMeRRwPLef6xmB1saMMtljxQTmav/view?usp=sharing"
+          href="https://drive.google.com/file/d/18vOLl1Ycj5paHnWvg4y3Un14xWbbSLUk/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
